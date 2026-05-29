@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.css" rel="stylesheet" />
+</head>
+<body>
+    <%- include('partials/sidebar') %>
+    <div class="sm:ml-64 p-4">
+    
+        <!-- Dashboard Heading -->
+        <div class="mb-6">
+            <h1 class="text-2xl font-semibold text-heading">Dashboard</h1>
+            <p class="text-body text-sm">Task overview and statistics</p>
+        </div>
+    
+        <!-- Cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+    
+            <!-- Total Tasks -->
+            <div class="bg-neutral-primary-soft border border-default rounded-base p-5 shadow-xs">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <p class="text-sm text-body">Total Tasks</p>
+                        <h2 class="text-3xl font-bold text-heading mt-2"><%= formattedCounts.totalTasks %></h2>
+                    </div>
+    
+                    <div class="p-3 rounded-full bg-neutral-tertiary">
+                        <svg class="w-6 h-6 text-fg-brand" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V9m-5-4 5 5m-5-5v5h5"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Pending Tasks -->
+            <div class="bg-neutral-primary-soft border border-default rounded-base p-5 shadow-xs">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <p class="text-sm text-body">Pending Tasks</p>
+                        <h2 class="text-3xl font-bold text-heading mt-2"><%= formattedCounts.pendingTasks %> </h2>
+                    </div>
+    
+                    <div class="p-3 rounded-full bg-neutral-tertiary">
+                        <svg class="w-6 h-6 text-fg-brand" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M12 6v6l4 2"/>
+                            <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    
+                </div>
+            </div>
+    
+            <!-- Today's Tasks -->
+            <div class="bg-neutral-primary-soft border border-default rounded-base p-5 shadow-xs">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <p class="text-sm text-body">Today's Tasks</p>
+                        <h2 class="text-3xl font-bold text-heading mt-2"><%= formattedCounts.tasksDueToday %></h2>
+                    </div>
+    
+                    <div class="p-3 rounded-full bg-neutral-tertiary">
+                        <svg class="w-6 h-6 text-fg-brand" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a1 1 0 0 0 1-1V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v13a1 1 0 0 0 1 1Z"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-neutral-primary-soft border border-default rounded-base p-5 shadow-xs">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <p class="text-sm text-body">Complate Tasks</p>
+                        <h2 class="text-3xl font-bold text-heading mt-2"><%= formattedCounts.completedTasks %></h2>
+                    </div>
+    
+                    <div class="p-3 rounded-full bg-neutral-tertiary">
+                        <svg class="w-6 h-6 text-fg-brand" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a1 1 0 0 0 1-1V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v13a1 1 0 0 0 1 1Z"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+</body>
+</html>

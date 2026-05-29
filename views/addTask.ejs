@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Task</title>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.css" rel="stylesheet" />
+</head>
+<body>
+     <%- include('partials/sidebar') %>
+    
+    <div class="max-w-sm mx-auto">
+      <h1 class="bg-cyan-700 mt-8">Add Task</h1>
+   
+  <form class="mt-4" action="/tasks" method="POST">
+  
+    <div class="mb-5">
+      <label for="task" class="block mb-2.5 text-sm font-medium text-heading">Enter Task Name</label>
+      <input type="text" id="task" class="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" name="title" required />
+      <label for="date" class="block mb-2.5 text-sm font-medium text-heading">Task Date</label>
+      <input type="date" id="date" class="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body" name="date" required />
+    </div>
+    <button type="submit" class="text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">Submit</button>
+  </form>
+</div>
+</body>
+</html>
